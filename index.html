@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyCat Clicker</title>
+		<script src = "knockout-3.4.2.js"></script>
+		<script src = "catClickerViewModel.js" defer="defer"></script>
+	</head>
+	<body>
+	<ul data-bind = "foreach:catList">
+		<li data-bind = "text:name, click: $parent.setCat"></li>
+	</ul>
+	<div data-bind="with:currentCat">
+		<h1 data-bind = "text:name"></h1>
+		<p data-bind = "text:clickCount"></p>
+		<img src="" data-bind="click:$parent.		incrementCounter, attr:{src:imgSrc}">
+	</div>
+
+
+	</body>
+</html>
